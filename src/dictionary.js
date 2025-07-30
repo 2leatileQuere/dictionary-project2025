@@ -4,18 +4,24 @@ import axios from "axios";
 import Results from "./Results";
 
 export default function Dictionary(props) {
-  let [keyword, setKeyword] = useState(props.defaultKeyword);
-  let [results, setResults] = useState(null);
-  let [loaded, setLoaded] = useState(false);
+  const [keyword, setKeyword] = useState(props.defaultKeyword);
+  const [results, setResults] = useState(null);
+  const [loaded, setLoaded] = useState(false);
 
   function handleDictionaryResponse(response) {
     setResults(response.data);
   }
 
   function search() {
-    let apiKey = "314t6060bfcoe7ed3da1e87a97833d3d";
-    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleDictionaryResponse);
+    const apiKey = "314t6060bfcoe7ed3da1e87a97833d3d";
+    const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+    axios
+      .get(apiUrl)
+      .then(handleDictionaryResponse)
+      .catch(() => {
+        setResults(null);
+        alert("Word not found. Try another one.");
+      });
   }
 
   function handleSubmit(event) {
@@ -34,23 +40,23 @@ export default function Dictionary(props) {
 
   if (loaded) {
     return (
-      <div className="Dictionary container mt-5">
-        <section>
-          <h1 className="mb-3">What word do you want to look up?</h1>
+      <div className="dictionary container">
+        <section className="search-section">
+          <h1>What word do you want to look up?</h1>
           <form onSubmit={handleSubmit}>
             <input
               type="search"
-              className="form-control"
               onChange={handleKeywordChange}
               defaultValue={props.defaultKeyword}
+              placeholder="Type a word like dream, sunset, joy..."
             />
+            <button type="submit">Search</button>
           </form>
-          <div className="hint mt-2 text-muted">
-            Suggested: sunset, wine, yoga, plant...
-          </div>
         </section>
-        <Results results={results} />
-        {/* <Photos photos={photos} /> — you can bring this back later */}
+
+        {results && <Results results={results} />}
+
+        {/* Optional: <Photos photos={photos} /> */}
       </div>
     );
   } else {
