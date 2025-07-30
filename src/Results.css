@@ -1,0 +1,13 @@
+.Results {
+  background: #d09d37c1;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px rgba(0 0 0 / 10%);
+  margin: 20px 0;
+}
+
+.Results h2 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5;
+}
