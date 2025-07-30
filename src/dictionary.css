@@ -1,135 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap");
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", sans-serif;
-  background-color: #fefcf9;
-  color: #333;
-  line-height: 1.6;
+.Dictionary {
+  margin-top: 2rem;
 }
 
-.container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-}
-
-h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  color: #2c2c2c;
-}
-
-.search-section {
+.Dictionary section {
   background-color: #f4c987;
-  padding: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
-  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
 }
 
-.search-section h2 {
+.Dictionary section h2 {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #4a3b0d;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
 }
 
-input[type="search"] {
+.Dictionary input[type="search"] {
   width: 100%;
+  max-width: 400px;
   padding: 0.8rem 1rem;
   font-size: 1rem;
-  border-radius: 8px;
   border: 2px solid transparent;
+  border-radius: 8px;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-input[type="search"]:focus {
+.Dictionary input[type="search"]:focus {
   border-color: #c49a3f;
   box-shadow: 0 0 8px rgba(212, 162, 75, 0.4);
   outline: none;
 }
 
-.result-card {
-  background-color: #fff9f0;
-  border-left: 5px solid #c49a3f;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
+.Dictionary .hint {
+  font-size: 0.9rem;
+  color: #5c440a;
+  margin-top: 0.8rem;
+  font-family: "Inter", sans-serif;
 }
 
-.result-card h3 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: #2a1f0f;
-}
-
-.result-card .part-of-speech {
-  font-weight: bold;
-  color: #754c00;
-  margin-top: 1rem;
-  font-size: 1.1rem;
-}
-
-.result-card .definition {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
-
-.result-card .synonyms {
-  margin-top: 0.5rem;
-}
-
-button {
-  background-color: #c49a3f;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background-color: #a67c28;
-  transform: scale(1.02);
-}
-
-button:active {
-  transform: scale(0.98);
-}
-
-@keyframes fadeInUp {
-  0% {
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+.Dictionary .fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
 @media (max-width: 600px) {
-  .container {
+  .Dictionary section {
     padding: 1rem;
   }
 
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .search-section {
-    padding: 1rem;
-  }
-
-  .result-card {
-    padding: 1rem;
+  .Dictionary input[type="search"] {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
   }
 }
