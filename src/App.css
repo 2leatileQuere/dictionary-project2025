@@ -1,0 +1,40 @@
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.App-header {
+  background-image: url("/images/tittle.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 100px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.App-header h1 {
+  text-shadow: 2px 2px 4px white;
+  font-size: 60px;
+}
+
+.App-footer {
+  text-align: center;
+  margin: 20px 0;
+  background: #d09d37c1;
+  color: #704f08;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+i {
+  color: #704f08;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: bold;
+}
