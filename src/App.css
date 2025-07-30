@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap");
 
 html,
 body {
   height: 100%;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #fefcf9;
   color: #333;
 }
@@ -20,9 +20,51 @@ main {
 }
 
 .App-header h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 3rem;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  color: #2c2c2c
+  color: #2c2c2c;
+}
+
+/* Optional: Center container content and keep layout clean */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Footer styles */
+.App-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #f2f2f2;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  color: #555;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #2c2c2c;
+}
+
+.footer-text a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
