@@ -1,9 +1,24 @@
-.Photos img {
-  border-radius: 4px;
-  margin-bottom: 20px;
-  transition: transform 0.2s ease-in-out;
+.Photos {
+  margin-top: 2rem;
+  text-align: center;
 }
 
-.Photos img:hover {
-  transform: scale(1.2);
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.03);
 }
