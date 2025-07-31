@@ -17,7 +17,7 @@ function App() {
           </header>
 
           <main>
-            <Dictionary defaultKeyword="PARIS" />
+            <Dictionary defaultKeyword="STARS" />
           </main>
 
           <footer className="App-footer">
