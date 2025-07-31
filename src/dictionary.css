@@ -66,6 +66,27 @@
   .Dictionary section {
     padding: 1rem;
   }
+  .Dictionary button {
+    background-color: #c49a3f;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+  }
+
+  .Dictionary button:hover {
+    background-color: #a67c28;
+    transform: scale(1.02);
+  }
+
+  .Dictionary button:active {
+    transform: scale(0.98);
+  }
 
   .Dictionary input[type="search"] {
     font-size: 0.95rem;
