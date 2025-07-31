@@ -4,22 +4,26 @@ import "./Meaning.css";
 
 export default function Meaning(props) {
   return (
-    <div className="Meaning">
-      <hr />
-      <h3>{props.meaning.partOfSpeech}</h3>
-      <div className="definition">{props.meaning.definition}</div>
+    <div className="meaning-card">
+      <div className="part-of-speech">{props.meaning.partOfSpeech}</div>
 
-      <div className="example">
-        {props.meaning.example && (
-          <div>
-            <strong>Example:</strong> <em>{props.meaning.example}</em>
-          </div>
-        )}
+      <div className="definition">
+        {props.meaning.definitions &&
+          props.meaning.definitions.map((definition, index) => (
+            <div key={index}>
+              <strong>Definition:</strong> {definition.definition}
+              {definition.example && (
+                <div className="example">
+                  <strong>Example:</strong> <em>{definition.example}</em>
+                </div>
+              )}
+              {definition.synonyms && definition.synonyms.length > 0 && (
+                <Synonyms synonyms={definition.synonyms} />
+              )}
+              <hr />
+            </div>
+          ))}
       </div>
-
-      {props.meaning.synonyms && props.meaning.synonyms.length > 0 && (
-        <Synonyms synonyms={props.meaning.synonyms} />
-      )}
     </div>
   );
 }
