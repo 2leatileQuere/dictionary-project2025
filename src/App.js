@@ -5,11 +5,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 function App() {
   return (
     <>
-      <video autoPlay loop muted playsInline className="bg-video">
-        <source
-          src={`${process.env.PUBLIC_URL}/Background.mp4`}
-          type="video/mp4"
-        />
+      <video autoPlay loop muted playsInline className="background-video">
+        <source src="/bg.mp4" type="video/mp4" />
       </video>
       <div className="overlay"></div>
 
