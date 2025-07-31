@@ -1,20 +1,28 @@
 import "./App.css";
 import Dictionary from "./Dictionary";
-import ParticlesBackground from "./ParticlesBackground";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   return (
     <>
-      <ParticlesBackground />
+      <video autoPlay loop muted playsInline className="bg-video">
+        <source
+          src={`${process.env.PUBLIC_URL}/Background.mp4`}
+          type="video/mp4"
+        />
+      </video>
+      <div className="overlay"></div>
+
       <div className="App">
         <div className="container">
           <header className="App-header">
             <h1 className="text-center">Dictionary</h1>
           </header>
+
           <main>
             <Dictionary defaultKeyword="PARIS" />
           </main>
+
           <footer className="App-footer">
             <div className="footer-icons">
               <a
@@ -42,6 +50,7 @@ function App() {
                 <i className="fab fa-linkedin"></i>
               </a>
             </div>
+
             <p className="footer-text">
               Coded by Leatile Quere • Open sourced •{" "}
               <a
