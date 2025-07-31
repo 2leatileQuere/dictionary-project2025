@@ -1,11 +1,12 @@
 import "./App.css";
 import Dictionary from "./Dictionary";
+import ParticlesBackground from "./ParticlesBackground";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   return (
     <>
-      <div className="animated-background"></div>
+      <ParticlesBackground />
       <div className="App">
         <div className="container">
           <header className="App-header">
