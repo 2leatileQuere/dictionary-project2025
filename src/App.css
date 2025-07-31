@@ -8,7 +8,8 @@ body {
   background: linear-gradient(-45deg, #f5eaff, #d4e0fc, #e4f2f1, #fbeaff);
   background-size: 400% 400%;
   animation: gradientFlow 15s ease infinite;
-  color: #333;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 .background-video {
@@ -18,7 +19,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   object-fit: cover;
-  z-index: -3;
+  z-index: -2;
   opacity: 0.4;
 }
 
@@ -29,33 +30,18 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
-  z-index: -2;
-}
-
-.animated-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.15) 1px,
-    transparent 1px
-  );
-  background-size: 20px 20px;
-  animation: glitterMove 10s linear infinite;
   z-index: -1;
-  opacity: 0.5;
-  pointer-events: none;
 }
 
-@keyframes glitterMove {
+@keyframes gradientFlow {
   0% {
-    background-position: 0 0;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 100px 100px;
+    background-position: 0% 50%;
   }
 }
 
@@ -65,7 +51,6 @@ body {
   min-height: 100vh;
   position: relative;
   z-index: 1;
-  color: white;
 }
 
 main {
@@ -90,10 +75,10 @@ main {
 .App-footer {
   text-align: center;
   padding: 1.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-top: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
-  color: #ddd;
+  color: #eee;
 }
 
 .footer-icons {
@@ -112,22 +97,10 @@ main {
 }
 
 .footer-text a {
-  color: #87cefa;
+  color: #add8e6;
   text-decoration: none;
 }
 
 .footer-text a:hover {
   text-decoration: underline;
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
