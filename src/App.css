@@ -53,7 +53,7 @@ h1 {
 .App-footer {
   text-align: center;
   padding: 1.5rem 1rem;
-  background-color: #e8d3b9;
+  background-color: black;
   border-top: 1px solid rgba(15, 14, 14, 0.808);
   font-size: 0.9rem;
   font-weight: bold;
@@ -77,7 +77,7 @@ h1 {
 }
 
 .footer-text a {
-  color: black;
+  color: blue;
   text-decoration: none;
   font-weight: bold;
 }
