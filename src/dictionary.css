@@ -1,95 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap");
-
-.Dictionary {
-  margin-top: 2rem;
-}
-
 .Dictionary section {
-  background-color: #f4c987;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
-  text-align: center;
-  font-family: "Inter", sans-serif;
+  background: #d09d37c1;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0 0 0 / 10%);
+  margin: 20px 0;
 }
 
-.Dictionary section h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #4a3b0d;
-  font-weight: 600;
-  font-family: "Playfair Display", serif;
-}
-
-.Dictionary input[type="search"] {
+.Dictionary input {
   width: 100%;
-  max-width: 400px;
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
-.Dictionary input[type="search"]:focus {
-  border-color: #c49a3f;
-  box-shadow: 0 0 8px rgba(212, 162, 75, 0.4);
-  outline: none;
+  border-radius: 6px;
+  padding: 6px 4px;
+  color: #333;
+  border: 1px solid #d09d37;
 }
 
 .Dictionary .hint {
-  font-size: 0.9rem;
-  color: #5c440a;
-  margin-top: 0.8rem;
-  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  margin-top: 2px;
+  color: white;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.Dictionary .fade-in {
-  animation: fadeIn 0.6s ease forwards;
-}
-
-@media (max-width: 600px) {
-  .Dictionary section {
-    padding: 1rem;
-  }
-  .Dictionary button {
-    background-color: #c49a3f;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    font-family: "Inter", sans-serif;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 1rem;
-  }
-
-  .Dictionary button:hover {
-    background-color: #a67c28;
-    transform: scale(1.02);
-  }
-
-  .Dictionary button:active {
-    transform: scale(0.98);
-  }
-
-  .Dictionary input[type="search"] {
-    font-size: 0.95rem;
-    padding: 0.7rem 0.9rem;
-  }
+.Dictionary h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
