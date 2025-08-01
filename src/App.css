@@ -3,6 +3,27 @@
   max-width: 960px;
   margin: 0 auto;
 }
+.App-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 3rem;
+  color: #000000;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.6);
+}
+
+.search-section h1 {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
 
 .App-header {
   background-position: center;
@@ -16,7 +37,7 @@
 
 .App-header h1 {
   text-shadow: 2px 2px 4px white;
-  font-size: 60px;
+  font-size: 55px;
 }
 
 i {
@@ -32,8 +53,8 @@ h1 {
 .App-footer {
   text-align: center;
   padding: 1.5rem 1rem;
-  background-color: #6a6356c1;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #e8d3b9;
+  border-top: 1px solid rgba(15, 14, 14, 0.808);
   font-size: 0.9rem;
   font-weight: bold;
   color: #fff;
@@ -56,8 +77,9 @@ h1 {
 }
 
 .footer-text a {
-  color: #add8e6;
+  color: black;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .footer-text a:hover {

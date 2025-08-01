@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap");
 .Dictionary section {
-  background: #d09d37c1;
+  background-color: whitesmoke;
   padding: 30px;
   border-radius: 6px;
   box-shadow: 0 10px 20px rgba(0 0 0 / 10%);
@@ -12,7 +12,7 @@
   border-radius: 6px;
   padding: 6px 4px;
   color: #333;
-  border: 1px solid #d09d37;
+  border: 1px solid burlywood;
 }
 
 .Dictionary .hint {
